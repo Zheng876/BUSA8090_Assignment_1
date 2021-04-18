@@ -11,3 +11,9 @@ sort -k1r expression > f2
 cat f1 > annotation
 cat f2 > expression
 join -t$'\t' -o 1.1 1.2 2.2 1.3 annotation expression
+
+#1d)ii)
+select metabolism
+from annotation
+group by metabolism
+having count (*) > 1; 
